@@ -1,13 +1,62 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import TestElements from "./components/TestElements";
+import TestEvents from "./components/TestEvents";
+import TestAsync from "./components/TestAsync";
+import reportWebVitals from "./reportWebVitals";
+import TestRedux from "./components/TestRedux";
+import TestContext from "./components/TestContext";
+import TestRouter from "./components/TestRouter";
+import TextAxios from "./components/TextAxios";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import { Provider } from "react-redux";
+import { reducer } from "./components/reducer";
+import { legacy_createStore as createStore } from "redux";
+
+import { BrowserRouter } from "react-router-dom";
+
+const store = createStore(reducer);
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <App />
+    Elements
+    <br />
+    <TestElements />
+    <br />
+    Events
+    <br />
+    <TestEvents />
+    <br />
+    Async
+    <br />
+    <TestAsync />
+    <br />
+    State Mgmt
+    <br />
+    <br />
+    <Provider store={store}>
+      <TestRedux />
+    </Provider>
+    <br />
+    <br />
+    Context API
+    <TestContext />
+    <br />
+    <br />
+    TestRouter
+    <br />
+    <br />
+    <BrowserRouter>
+      <TestRouter />
+    </BrowserRouter>
+    <br />
+    <br />
+    <TextAxios/> 
+    <br />
+    <br />
   </React.StrictMode>
 );
 
