@@ -54,7 +54,7 @@ root.render(
     </BrowserRouter>
     <br />
     <br />
-    <TextAxios/> 
+    <TextAxios url={"https://jsonplaceholder.typicode.com/todos/1"} />
     <br />
     <br />
   </React.StrictMode>
