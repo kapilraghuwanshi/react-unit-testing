@@ -16,6 +16,8 @@
     "redux" & "react-redux"
     "react-router-dom" & "history"
     "axios"
+    
+# Deployed it on GitHub Pages on (https://kapilraghuwanshi.github.io/react-unit-testing/)
 
 # Getting Started with Create React App
 
